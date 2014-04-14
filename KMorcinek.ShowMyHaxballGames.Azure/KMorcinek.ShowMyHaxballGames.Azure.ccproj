@@ -36,6 +36,28 @@
     <ServiceConfiguration Include="ServiceConfiguration.Local.cscfg" />
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KMorcinek.ShowMyHaxballGames\KMorcinek.ShowMyHaxballGames.csproj">
+      <Name>KMorcinek.ShowMyHaxballGames</Name>
+      <Project>{b4f9c525-5c56-440e-b4c2-972a33d7c8cd}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>KMorcinek.ShowMyHaxballGames</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="KMorcinek.ShowMyHaxballGamesContent\" />
+    <Folder Include="Profiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KMorcinek.ShowMyHaxballGamesContent\diagnostics.wadcfg">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\makingfifaProduction.azurePubxml" />
+  </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
